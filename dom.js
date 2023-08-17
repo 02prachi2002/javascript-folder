@@ -34,3 +34,34 @@
 //.text contex
 //.inner text
 //create element
+
+
+document.addEventListener('click', function()
+{
+    console.log("prachi");
+})
+//  document --> specifies that kaha eventlistner lagaya ja raha hai
+//  click --> specifies that ki kya karne par add eventlistner vala function activate hoga
+//  function()--> it occurs when we click on document 
+
+// to change the style by clicking on event 
+let a = document.querySelector('h1');
+a.addEventListener('click', function()
+{
+    a.style.background = 'pink';
+})
+
+// another way to write the above code
+function toprintpraci()
+{
+    console.log("prachii");
+}
+document.addEventListener('click', toprintpraci );
+
+//remove event listner
+function toprintpracis()
+{
+    console.log("isha");
+}
+document.addEventListener('click', toprintpracis );
+
