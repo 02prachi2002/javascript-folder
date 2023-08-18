@@ -36,32 +36,41 @@
 //create element
 
 
-document.addEventListener('click', function()
-{
-    console.log("prachi");
-})
+// document.addEventListener('click', function()
+// {
+//     console.log("prachi");
+// })
 //  document --> specifies that kaha eventlistner lagaya ja raha hai
 //  click --> specifies that ki kya karne par add eventlistner vala function activate hoga
 //  function()--> it occurs when we click on document 
 
 // to change the style by clicking on event 
-let a = document.querySelector('h1');
-a.addEventListener('click', function()
-{
-    a.style.background = 'pink';
-})
+// let a = document.querySelector('h1');
+// a.addEventListener('click', function()
+// {
+//     a.style.background = 'pink';
+// })
 
 // another way to write the above code
-function toprintpraci()
-{
-    console.log("prachii");
-}
-document.addEventListener('click', toprintpraci );
+// function toprintpraci()
+// {
+//     console.log("prachii");
+// }
+// document.addEventListener('click', toprintpraci );
 
 //remove event listner
-function toprintpracis()
-{
-    console.log("isha");
-}
-document.addEventListener('click', toprintpracis );
+// function toprintpracis()
+// {
+//     console.log("isha");
+// }
+// document.addEventListener('click', toprintpracis );
+
+//print an event object or the data that provide wher and when etc user has clicked on the site
+//can get event specific data from this method
+
+ let content = document.querySelector("#wrap");
+ content.addEventListener('click', function(event)
+ {
+    console.log(event);
+ })
 
