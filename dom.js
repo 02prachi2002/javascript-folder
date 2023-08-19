@@ -63,7 +63,7 @@
 // {
 //     console.log("isha");
 // }
-// document.addEventListener('click', toprintpracis );
+// document.removeEventListener('click', toprintpracis );
 
 //print an event object or the data that provide wher and when etc user has clicked on the site
 //can get event specific data from this method
@@ -74,3 +74,108 @@
     console.log(event);
  })
 
+
+
+//brute force code
+//  //this is the javascript to add a div tag
+// let newdiv = document.createElement('div');
+// for(let i=0;i<10;i++)
+// {
+//    //This adds a paragraph in a div which is created above
+//    let newpara = document.createElement('p');
+//    //adds a text in paragraph 
+//    newpara.textContent = 'this is the paragraph' + i;
+//    // adds a function to each paragraph that if anyone clicks the paragraph 'hello it worked ' is printed on console
+//    newpara.addEventListener('click', function(event){
+//       console.log('hello it worked'); // there are 10 function created for each paragragh line
+//    });
+//    //this tells that newpara is the child of the div
+//    newdiv.appendChild(newpara);
+
+// }
+// //the div which is created is the child of the document or the parent 
+// document.body.appendChild(newdiv);
+
+
+
+//lets optimize the code - now there is one function for all the paragraph tags
+ //this is the javascript to add a div tag
+// let newdiv = document.createElement('div');
+// function func(event){
+//    console.log('hello it worked'); // there are 10 function created for each paragragh line
+// }
+// for(let i=0;i<10;i++)
+// {
+//    //This adds a paragraph in a div which is created above
+//    let newpara = document.createElement('p');
+//    //adds a text in paragraph 
+//    newpara.textContent = 'this is the paragraph' + i;
+//    // adds a function to each paragraph that if anyone clicks the paragraph 'hello it worked ' is printed on console
+//    newpara.addEventListener('click', func);
+//    //this tells that newpara is the child of the div
+//    newdiv.appendChild(newpara);
+
+// }
+// //the div which is created is the child of the document or the parent 
+// document.body.appendChild(newdiv);
+
+
+
+// //now lets add this addeventlistner in the div
+// //now where ever we click inside the div function will work for sure even its the empty space in the div
+//  //this is the javascript to add a div tag
+//  let newdiv = document.createElement('div');
+//  function func(event){
+//     console.log('hello it worked'); // there are 10 function created for each paragragh line
+//  }
+//  newdiv.addEventListener('click', func);
+//  for(let i=0;i<10;i++)
+//  {
+//     //This adds a paragraph in a div which is created above
+//     let newpara = document.createElement('p');
+//     //adds a text in paragraph 
+//     newpara.textContent = 'this is the paragraph' + i;
+//     //this tells that newpara is the child of the div
+//     newdiv.appendChild(newpara);
+ 
+//  }
+//  //the div which is created is the child of the document or the parent 
+//  document.body.appendChild(newdiv);
+
+
+
+//  //now lets add this addeventlistner in the div and make it like by only clicking on the paragraph text only
+// //now where ever we click inside the div function will work for sure even its the empty space in the div
+//  //this is the javascript to add a div tag
+//  let newdiv = document.createElement('div');
+//  function func(event1){
+//     console.log('Para is '+ event1.target.textContent);
+//  }
+//  newdiv.addEventListener('click', func );
+//  for(let i=0;i<10;i++)
+//  {
+//     //This adds a paragraph in a div which is created above
+//     let newpara = document.createElement('p');
+//     //adds a text in paragraph 
+//     newpara.textContent = 'this is the paragraph' + i;
+//     //this tells that newpara is the child of the div
+//     newdiv.appendChild(newpara);
+ 
+//  }
+//  //the div which is created is the child of the document or the parent 
+//  document.body.appendChild(newdiv);
+
+
+// to specify to perform a certain function on clicking on the particulat area we use nodename property
+let element11 = document.querySelector('#wrap2');
+function wrap2func(event2)
+{
+   if(event2.target.nodeName==='SPAN'){
+      console.log('clicked in span tag ' + event2.target.textContent);
+
+   }
+   else{
+      console.log('kuch bhi');
+   }
+}
+element11.addEventListener('click', wrap2func);
