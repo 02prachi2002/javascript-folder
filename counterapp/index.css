@@ -1,0 +1,37 @@
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    
+}
+.controller{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+ 
+    align-items: center;
+    gap: 10%;
+    font-size: 5rem;
+    background-color: rgb(219, 188, 248);
+   
+}
+/* button{
+    margin: 5%;
+    padding: 5%;
+    border: none;
+    background-color: rgb(219, 188, 248);
+    font-size: 3rem ;
+} */
+h1{
+    font-size: 5rem;
+    text-align: center;
+    color: pink;
+}
+h2{
+    font-size: 3rem;
+    text-align: center;
+    color: rgb(196, 236, 19);
+}
