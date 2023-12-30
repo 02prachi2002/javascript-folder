@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" >
+</head>
+<body>
+
+    <div class="wrapper">
+       <h1>Weather App</h1>
+       <div class="Switching-Tab">
+        <div class="tab" your-weather-tab>Your Weather</div>
+        <div class="tab" search-weather-tab>Search Weather</div>
+       </div>
+       <div weather-container>
+        <div class="my-weather-location">
+            <img src="./assets/location.png "  width="20" height="20" loading="lazy">
+            <p>Grant location accesss</p>
+            <div>Allow access to get weather information</div>
+            <button grantaccessbutton>Grant Access</button>
+           </div>
+
+           <div class="searchForm" search-form>
+            <input placeholder="Search for city" search-city>
+            <button class="btn" type="submit">
+                <img src="./assets/search.png"  width="20" height="20" loading="lazy">
+            </button>
+           </div>
+    
+        <div class="loading-gif">
+            <img src="./assets/loading.gif" width="50" height="50" loading="lazy">
+            <p>Loading...</p>
+        </div>   
+        <div class="search-location">
+            <div class="name-of-city">
+                <div name-of-searched-location> </div>
+                <img country-icon>
+            </div>
+          
+            <div weather-in-location> </div>
+            <img related-image-of-weather>
+            <div temp-of-location></div>
+            <div class="cards-div">
+                <div class="windspeed-card">
+                    <img src="./assets/wind.png">
+                   <div class="windspeed-heading"> Windspeed</div>
+                   <p location-windspeed></p>
+                </div>
+                <div class="humidity-card">
+                    <img src="./assets/humidity.png">
+                   <div class="humidity-heading"> Windspeed</div>
+                   <p location-humidity></p>
+                </div>
+                <div class="clouds-card">
+                    <img src="./assets/cloud.png">
+                   <div class="clouds-heading"> Windspeed</div>
+                   <p location-clouds></p>
+                </div>
+            </div>
+    
+        </div>
+       </div>
+       
+
+    </div>
+    <script src="index.js"></script>
+
+</body>
+</html>
