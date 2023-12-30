@@ -40,11 +40,8 @@ const countryIcon = document.querySelector("[country-icon]");
 const weatherInLocation  = document.querySelector("[weather-in-location]");
 const relatedImageOfWeather = document.querySelector("[related-image-of-weather]");
 const tempOflocation = document.querySelector("[temp-of-location]");
-
 const locationWindspeed = document.querySelector("[location-windspeed]");
-
 const locationhumidity = document.querySelector("[location-humidity]");
-
 const locationclouds = document.querySelector("[location-clouds]");
 
 let currentTab = yourWeatherTab;
@@ -96,15 +93,18 @@ async function fetchuserweatherinfo(coordinates){
     const {lat,lon} = coordinates;
     myWeatherLocation.classList.remove("active");
     loadingGif.classList.add("active");
+    console.log("hello");
     try{
         const result  = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`)
         const data = await result.json();
         loadingGif.classList.remove("active");
         searchLocation.classList.add("active");
+        console.log("hello");
         renderWeatherInfo(data);
         }
         catch(err){
             loadingGif.classList.remove("active");
+          
         }
     }
 function renderWeatherInfo(weatherInfo){
@@ -116,6 +116,7 @@ function renderWeatherInfo(weatherInfo){
     relatedImageOfWeather.src = `http://openweathermap.org/img/w/${weatherInfo?.weather?.[0]?.icon}.png`;
     tempOflocation.innerText = weatherInfo?.main?.temp;
     locationWindspeed.innerText = weatherInfo?.wind?.speed;
+    console.log("hello");
     locationhumidity.innerText = weatherInfo?.main?.humidity;
     locationclouds.innerText = weatherInfo?.clouds?.all;
 }
@@ -141,11 +142,10 @@ function showPosition(position) {
 }
 const grantAccessButton = document.querySelector("[grantaccessbutton]");
 grantAccessButton.addEventListener("click", getLocation);
-
 searchForm.addEventListener("submit", (e) => {
     e.preventDefault();
     let cityName = searchCity.value;
-
+    console.log("hello");
     if(cityName === "")
         return;
     else 
@@ -155,13 +155,14 @@ async function fetchSearchWeatherInfo(city) {
     loadingGif.classList.add("active");
     searchLocation.classList.remove("active");
     myWeatherLocation.classList.remove("active");
-
+    console.log("hello");
     try {
         const response = await fetch(
             `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
           );
         const data = await response.json();
         loadingGif.classList.remove("active");
+        console.log("hello");
         searchLocation.classList.add("active");
         renderWeatherInfo(data);
     }
