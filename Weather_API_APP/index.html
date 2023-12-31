@@ -9,54 +9,56 @@
 <body>
 
     <div class="wrapper">
-       <h1>Weather App</h1>
+       <h1>WEATHER APP</h1>
        <div class="Switching-Tab">
         <div class="tab" your-weather-tab>Your Weather</div>
         <div class="tab" search-weather-tab>Search Weather</div>
        </div>
-       <div weather-container>
-        <div class="my-weather-location">
-            <img src="./assets/location.png "  width="20" height="20" loading="lazy">
-            <p>Grant location accesss</p>
-            <div>Allow access to get weather information</div>
-            <button grantaccessbutton>Grant Access</button>
+       <div class="weather-block" weather-container>
+        <div class=" sub-container my-weather-location">
+            <img src="./assets/location.png "  width="80" height="80" loading="lazy">
+            <p class="grant-para">Grant location accesss</p>
+            <div class="grant-para" >Allow access to get weather information</div>
+            <button class="grant-btn" type="submit" grantaccessbutton>Grant Access</button>
            </div>
 
-           <div  search-form>
-            <input placeholder="Search for city" search-city>
+           <div class=" sub-container loading-gif">
+            <img src="./assets/loading.gif" width="170" height="170" loading="lazy">
+            <p>Loading...</p>
+        </div>
+
+           </div>
+           <form class="  form-container" search-form>
+            <input placeholder="Search for City..." search-city>
             <button class="btn" type="submit">
                 <img src="./assets/search.png"  width="20" height="20" loading="lazy">
             </button>
-           </div>
-    
-        <div class="loading-gif">
-            <img src="./assets/loading.gif" width="50" height="50" loading="lazy">
-            <p>Loading...</p>
-        </div>   
-        <div class="search-location">
+        </form>
+          
+        <div class=" sub-container search-location">
             <div class="name-of-city">
-                <div name-of-searched-location> </div>
+                <div name-of-searched-location > </div>
                 <img country-icon>
             </div>
           
-            <div weather-in-location> </div>
-            <img related-image-of-weather>
-            <div temp-of-location></div>
+            <div weather-in-location class="usertext"> </div>
+            <img related-image-of-weather class="userimg">
+            <div temp-of-location  class="usertemp"></div>
             <div class="cards-div">
-                <div class="windspeed-card">
+                <div class=" card windspeed-card">
                     <img src="./assets/wind.png">
-                   <div class="windspeed-heading"> Windspeed</div>
-                   <p location-windspeed></p>
+                   <div class="windspeed-heading cardtext"> Windspeed</div>
+                   <p location-windspeed class="cardtext"></p>
                 </div>
-                <div class="humidity-card">
+                <div class=" card humidity-card">
                     <img src="./assets/humidity.png">
-                   <div class="humidity-heading"> Windspeed</div>
-                   <p location-humidity></p>
+                   <div class="humidity-heading cardtext "> Humidity</div>
+                   <p location-humidity class="cardtext"></p>
                 </div>
-                <div class="clouds-card">
+                <div class=" card clouds-card">
                     <img src="./assets/cloud.png">
-                   <div class="clouds-heading"> Windspeed</div>
-                   <p location-clouds></p>
+                   <div class="clouds-heading cardtext"> clouds</div>
+                   <p location-clouds class="cardtext"></p>
                 </div>
             </div>
     

@@ -114,7 +114,7 @@ function renderWeatherInfo(weatherInfo){
     countryIcon.src = `https://flagcdn.com/144x108/${weatherInfo?.sys?.country.toLowerCase()}.png`;
     weatherInLocation.innerText = weatherInfo?.weather?.[0]?.description;
     relatedImageOfWeather.src = `http://openweathermap.org/img/w/${weatherInfo?.weather?.[0]?.icon}.png`;
-    tempOflocation.innerText = weatherInfo?.main?.temp;
+    tempOflocation.innerText = `${weatherInfo?.main?.temp}°C`;
     locationWindspeed.innerText = weatherInfo?.wind?.speed;
     console.log("hello");
     locationhumidity.innerText = weatherInfo?.main?.humidity;
@@ -141,11 +141,11 @@ function showPosition(position) {
 
 }
 const grantAccessButton = document.querySelector("[grantaccessbutton]");
-grantAccessButton.addEventListener("click", getLocation);
+grantAccessButton.addEventListener("click", getLocation());
 searchForm.addEventListener("submit", (e) => {
     e.preventDefault();
     let cityName = searchCity.value;
-    console.log("hello");
+    
     if(cityName === "")
         return;
     else 
@@ -155,7 +155,7 @@ async function fetchSearchWeatherInfo(city) {
     loadingGif.classList.add("active");
     searchLocation.classList.remove("active");
     myWeatherLocation.classList.remove("active");
-    console.log("hello");
+ 
     try {
         const response = await fetch(
             `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`

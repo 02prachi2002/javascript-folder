@@ -1,8 +1,201 @@
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(47,197,237);
+    background: linear-gradient(49deg, rgba(47,197,237,0.5) 0%, rgba(36,164,205,1) 1%, rgba(25,131,173,1) 19%, rgba(15,100,144,1) 38%, rgba(9,83,128,1) 57%, rgba(4,70,115,1) 74%, rgba(4,70,115,1) 87%, rgba(3,68,113,1) 99%, rgba(2,64,109,0.5) 100%);
+}
+h1{
+    text-align: center;
+    color: rgb(217, 237, 249);
+    padding: 20px;
+
+}
+
+.Switching-Tab{
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    
+}
+.tab{
+    padding: 0.25rem;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
 .tab.current-tab{
-    background-color: aquamarine;
+    background-color: rgba(126, 142, 156, 0.581);
+    border: 2px solid rgb(175, 175, 175);
 }
 .searchForm.active{
     opacity: 1;
     scale: 1;
     display: flex;
+}
+
+.weather-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+}
+.grant-para{
+    text-align: center;
+    color: white;
+    font-size: 1.183rem;
+    margin: 1rem;
+}
+.grant-btn{
+    background-color: rgba(36, 113, 186, 0.616);
+    padding: 0.5rem;
+    /* border: none; */
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+/* this has placed all elements in center */
+.sub-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* this wont be displayed in normal condition */
+.my-weather-location{
+    display: none;
+}
+/* when asked by js code this will be displayed */
+.my-weather-location .active{
+    display: flex;
+}
+.loading-gif p{
+    text-align: center;
+    color: rgb(220, 237, 246);;
+    font-size: 1.183rem;
+    margin-left: 5rem;
+    letter-spacing: 1rem;
+}
+.loading-gif{
+    display: none;
+}
+.loading-gif .active{
+    display: flex;
+}
+
+.name-of-city {
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    margin: 1.5rem;
+}
+.name-of-city div{
+    text-align: center;
+    color: rgb(220, 237, 246);;
+    font-size: 1.7rem;
+}
+.name-of-city img{
+    width: 30px;
+    height: 30px;
+}
+.usertext{
+    text-align: center;
+    color: rgb(220, 237, 246);
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+.userimg{
+    width: 90px;
+    height: 90px;
+}
+.usertemp{
+    text-align: center;
+    color: rgb(220, 237, 246);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.cards-div{
+    display: flex;
+    gap: 0 3rem;
+    padding: 3rem;
+}
+.card{
+    border: none;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(156, 183, 195, 0.771);
+    border-radius: 4px;
+}
+.cardtext{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    font-weight:bold;
+    text-transform: uppercase;
+}
+.search-location{
+    display: none;
+}
+.search-location  .active{
+    display: flex;
+}
+.card img{
+    width: 4rem;
+}
+.form-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap : 0 1rem;
+}
+.form-container input{
+    width: 70%;
+    background-color: rgba(75, 146, 191, 0.6);
+    padding: 0.6rem;
+    border-radius: 1rem;
+    border: 2px solid white;
+    color: white;
+    font-size: 1rem;
+}
+.form-container ::placeholder{
+    color: white;
+    font-size: 1rem;
+}
+.form-container button{
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 100%;
+    padding: 0.5rem;
+
+}
+.form-container button img{
+    width: 2rem;
+    height: 2rem;
+    
+}
+
+.form-container input::placeholder{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.form-container input:focus{
+    outline: 3px solid rgba(255, 255, 255, 0.7);
 }
